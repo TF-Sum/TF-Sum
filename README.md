@@ -80,7 +80,11 @@ The vision-language models **BLIP-2** and **ImageBind** will be automatically do
 
 ## Pipeline Execution
 
-To run the full summarization pipeline on the **TVSum** dataset, execute the following scripts in order:
+Before running the scripts in `run_scripts/`, make sure to modify the absolute paths in the scripts. For example, if you place **TFSUM** in `/data01`, set the `TVSum_dir` path as follows:To run the full summarization pipeline (using **TVSum** as an example), execute the scripts inside the `run_scripts/TVSum/` directory in the following order:
+   ```bash
+   TVSum_dir="/data01/TFSUM/datasets/TVSum"
+   ```
+   You can also use relative paths if preferred. The same applies for **SumMe**: modify the `SumMe_dir` accordingly.
 
 **Extract frame captions and refine them using visual features**:
    ```bash
