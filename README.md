@@ -12,7 +12,7 @@
 
 Clone the repository to your local machine:
    ```bash
-   git clone 
+   git clone .......
    cd TFSUM
    ```
 Set up the conda environment:
@@ -26,22 +26,23 @@ Set up the conda environment:
 
 Download the **TVSum** and **SumMe** datasets:
 
-    **TVSum**: [https://github.com/yalesong/tvsum](https://github.com/yalesong/tvsum)  
-    **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe](https://opendatalab.org.cn/OpenDataLab/SumMe)
+- **TVSum**: [https://github.com/yalesong/tvsum](https://github.com/yalesong/tvsum)  
+- **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe](https://opendatalab.org.cn/OpenDataLab/SumMe)
 
 Organize the datasets as follows:
 
-    Place the **source videos** into the `/videos` subdirectory under each dataset folder.
+- Place the **source videos** into the `/videos` subdirectory under each dataset folder.
 
-    For **TVSum**:
-      Copy `ydata-tvsum50.mat` into `datasets/TVSum/annotations/`
+- For **TVSum**:  
+  Copy `ydata-tvsum50.mat` into `datasets/TVSum/annotations/`
 
-    For **SumMe**:
-      Extract the `GT` folder and place its contents into `datasets/SumMe/annotations/`
- Download the **preprocessed HDF5 annotation files**:
+- For **SumMe**:  
+  Extract the `GT` folder and place its contents into `datasets/SumMe/annotations/`
 
-    [eccv16_dataset_tvsum_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/TVSum/annotations/`,
-    [eccv16_dataset_summe_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/SumMe/annotations/`
+Download the **preprocessed HDF5 annotation files**:
+
+- [eccv16_dataset_tvsum_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/TVSum/annotations/`
+- [eccv16_dataset_summe_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/SumMe/annotations/`
 ```
 datasets/
 ├── TVSum/
@@ -96,7 +97,7 @@ To run the full summarization pipeline on the **TVSum** dataset, execute the fol
    ```bash
    bash run_scripts/TVSum/7_hierarchical_scores_refine_tvsum.sh
    ```
-** Evaluate and view the results**:
+**Evaluate and view the results**:
    ```bash
    bash run_scripts/TVSum/8_evaluate_tvsum.sh
    ```
