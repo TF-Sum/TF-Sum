@@ -47,14 +47,14 @@ Download the **preprocessed HDF5 annotation files**:
 datasets/
 ├── TVSum/
 │   ├── videos/
-│   │   └── ... (original TVSum video files)
+│   │   └── ...(original TVSum videos)
 │   └── annotations/
 │       ├── ydata-tvsum50.mat
 │       └── eccv16_dataset_tvsum_google_pool5.h5
 │
 └── SumMe/
     ├── videos/
-    │   └── ... (original SumMe video files)
+    │   └── ... (original SumMe videos)
     └── annotations/
         ├── GT/  (extracted ground truth files)
         └── eccv16_dataset_summe_google_pool5.h5
@@ -76,7 +76,7 @@ After downloading, place the model folder`llama-2-13b-chat/`into the following p
    ```
 The vision-language models **BLIP-2** and **ImageBind** will be automatically downloaded during runtime.
 
-## Run
+## Pipeline Execution
 
 To run the full summarization pipeline on the **TVSum** dataset, execute the following scripts in order:
 
@@ -102,3 +102,4 @@ To run the full summarization pipeline on the **TVSum** dataset, execute the fol
    bash run_scripts/TVSum/8_evaluate_tvsum.sh
    ```
 The same procedure applies to the **SumMe** dataset (under `run_scripts/SumMe`).  If you want to apply TF-SUM to your **own dataset**, simply modify the file paths in the corresponding scripts.
+> ⚠️ **Make sure to execute the scripts in the correct order. Running them out of sequence will result in errors.**
