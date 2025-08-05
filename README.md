@@ -44,21 +44,24 @@ Download the **preprocessed HDF5 annotation files**:
 - [eccv16_dataset_tvsum_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/TVSum/annotations/`
 - [eccv16_dataset_summe_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/SumMe/annotations/`
 ```
-datasets/
+datasets📁/
 ├── TVSum/
 │   ├── videos/
-│   │   └── ...(original TVSum videos)
+│   │   └── ... (original TVSum video files)
 │   └── annotations/
 │       ├── ydata-tvsum50.mat
-│       └── eccv16_dataset_tvsum_google_pool5.h5
+│       ├── eccv16_dataset_tvsum_google_pool5.h5
+│       └── ydata-tvsum50-anno.tsv  (auto-included after git clone, do not delete)
 │
 └── SumMe/
     ├── videos/
-    │   └── ... (original SumMe videos)
+    │   └── ... (original SumMe video files)
     └── annotations/
-        ├── GT/  (extracted ground truth files)
-        └── eccv16_dataset_summe_google_pool5.h5
+        ├── GT/ (extracted ground truth files)
+        ├── eccv16_dataset_summe_google_pool5.h5
+        └── ydata-summe50-anno.tsv  (auto-included after git clone, do not delete)
 ```
+
 > Make sure the folder structure and filenames are correct, as the system relies on these paths for loading data.
 
 ## Model Preparation
@@ -70,7 +73,7 @@ The large language model used in this project is **LLaMA 2**, specifically the *
 After downloading, place the model folder`llama-2-13b-chat/`into the following path:
 
    ```
-   libs/
+   libs📁/
    └── llama/
        └── llama-2-13b-chat/
    ```
@@ -101,5 +104,5 @@ To run the full summarization pipeline on the **TVSum** dataset, execute the fol
    ```bash
    bash run_scripts/TVSum/8_evaluate_tvsum.sh
    ```
-The same procedure applies to the **SumMe** dataset (under `run_scripts/SumMe`).  If you want to apply TF-SUM to your **own dataset**, simply modify the file paths in the corresponding scripts.
+The same procedure applies to the **SumMe** dataset (under `run_scripts/SumMe`).  If you want to apply TF-SUM to your **own dataset**, simply modify the file paths in the corresponding scripts, and ensure that your dataset includes annotation files (e.g., `.tsv`, `.mat`, or `.h5`) similar to those used in TVSum or SumMe.
 > ⚠️ **Make sure to execute the scripts in the correct order. Running them out of sequence will result in errors.**
