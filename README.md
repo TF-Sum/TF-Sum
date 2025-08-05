@@ -25,9 +25,8 @@ Set up the conda environment:
 ##  Datasets
 
 Download the **TVSum** and **SumMe** datasets:
-
-- **TVSum**: [https://github.com/yalesong/tvsum](https://github.com/yalesong/tvsum)  
-- **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe](https://opendatalab.org.cn/OpenDataLab/SumMe)
+- **TVSum**: [https://opendatalab.com/OpenDataLab/TVSum/tree/main (https://opendatalab.com/OpenDataLab/TVSum)  
+- **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe] (https://opendatalab.org.cn/OpenDataLab/SumMe)
 
 Organize the datasets as follows:
 
