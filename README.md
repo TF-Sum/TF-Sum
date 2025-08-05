@@ -1,4 +1,4 @@
-#TF-SUM: Training-free Video Summarization via Language-based Hierarchical Scoring
+# TF-SUM: Training-free Video Summarization via Language-based Hierarchical Scoring
 > **TF-SUM**  is an innovative video summarization framework that generates high-quality video summaries without any training or manual annotations. It fully leverages the capabilities of pre-trained Large Vision-Language Models (LVLMs) and Large Language Models (LLMs). Specifically, an LVLM is first used to generate textual descriptions for each video frame, with noisy captions filtered via cross-modal similarity. Then, an LLM performs hierarchical importance scoring based on the textual summaries to produce both frame-level and segment-level scores. Finally, visual similarity is used to remove redundant content and refine the importance distribution. **TF-SUM** demonstrates strong performance on two public benchmarks, TVSum and SumMe.*
 
 ## Hardware 
@@ -26,23 +26,23 @@
 
 1. Download the **TVSum** and **SumMe** datasets:
 
-   - **TVSum**: [https://github.com/yalesong/tvsum](https://github.com/yalesong/tvsum)  
-   - **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe](https://opendatalab.org.cn/OpenDataLab/SumMe)
+    **TVSum**: [https://github.com/yalesong/tvsum](https://github.com/yalesong/tvsum)  
+    **SumMe**: [https://opendatalab.org.cn/OpenDataLab/SumMe](https://opendatalab.org.cn/OpenDataLab/SumMe)
 
 2. Organize the datasets as follows:
 
-   - Place the **source videos** into the `/videos` subdirectory under each dataset folder.
+    Place the **source videos** into the `/videos` subdirectory under each dataset folder.
 
-   - For **TVSum**:
-     - Copy `ydata-tvsum50.mat` into `datasets/TVSum/annotations/`
+    For **TVSum**:
+      Copy `ydata-tvsum50.mat` into `datasets/TVSum/annotations/`
 
-   - For **SumMe**:
-     - Extract the `GT` folder and place its contents into `datasets/SumMe/annotations/`
+    For **SumMe**:
+      Extract the `GT` folder and place its contents into `datasets/SumMe/annotations/`
 
 3. Download the **preprocessed HDF5 annotation files**:
 
-   - [eccv16_dataset_tvsum_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/TVSum/annotations/`
-   - [eccv16_dataset_summe_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/SumMe/annotations/`
+    [eccv16_dataset_tvsum_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/TVSum/annotations/`
+    [eccv16_dataset_summe_google_pool5.h5](https://www.sendgb.com/upload/?utm_source=igjvxR46m5I) → place into `datasets/SumMe/annotations/`
 ```
 datasets/
 ├── TVSum/
